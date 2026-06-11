@@ -1,5 +1,6 @@
 package studio.thinkground.springbasic.service;
 
+import org.springframework.stereotype.Service;
 import studio.thinkground.springbasic.domain.Member;
 import studio.thinkground.springbasic.repository.MemberRepository;
 import studio.thinkground.springbasic.repository.MemoryMemberRepository;
@@ -7,6 +8,7 @@ import studio.thinkground.springbasic.repository.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
