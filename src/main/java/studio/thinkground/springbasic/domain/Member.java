@@ -1,8 +1,13 @@
 package studio.thinkground.springbasic.domain;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Member {
+
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String Name;
+    private String name;
 
     public Long getId() {
         return id;
@@ -13,10 +18,10 @@ public class Member {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 }

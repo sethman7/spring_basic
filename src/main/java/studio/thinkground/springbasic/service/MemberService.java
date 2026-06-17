@@ -1,6 +1,8 @@
 package studio.thinkground.springbasic.service;
 
+
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import studio.thinkground.springbasic.domain.Member;
 import studio.thinkground.springbasic.repository.MemberRepository;
 import studio.thinkground.springbasic.repository.MemoryMemberRepository;
@@ -9,6 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;

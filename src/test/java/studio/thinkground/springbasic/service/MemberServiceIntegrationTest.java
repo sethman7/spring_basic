@@ -3,6 +3,8 @@ package studio.thinkground.springbasic.service;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import org.springframework.transaction.annotation.Transactional;
 import studio.thinkground.springbasic.domain.Member;
 import studio.thinkground.springbasic.repository.MemberRepository;
 
@@ -11,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-
+@Transactional
 public class MemberServiceIntegrationTest {
 
     @Autowired MemberService memberService;
